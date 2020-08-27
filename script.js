@@ -41,3 +41,24 @@ function scrollFunctions(){
 
 }
 
+var menuState=1
+document.querySelector('.veg-menu-btn').addEventListener('click',menuVegClick);
+document.querySelector('.non-veg-menu-btn').addEventListener('click',menuNVegClick);
+
+
+function  menuVegClick(){
+    if(menuState==0){
+        document.querySelector('.menu-1').classList.remove('no-menu');
+        document.querySelector('.menu-2').classList.add('no-menu');
+        document.querySelector('.menu-1').classList.add('veg-menu');
+        menuState=1;
+    }
+}
+function menuNVegClick(){
+    if(menuState==1){
+        document.querySelector('.menu-2').classList.remove('no-menu');
+        document.querySelector('.menu-1').classList.add('no-menu');
+        document.querySelector('.menu-2').classList.add('non-veg-menu');
+        menuState=0;
+    }
+}

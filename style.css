@@ -6,6 +6,7 @@
 }
 body{
     position: relative;
+    overflow-x: hidden;
 }
 *{
     font-size: 17px;
@@ -125,13 +126,135 @@ header{
     justify-content: center;
     text-align: center;
 }
+.row-7{
+    display: grid;
+    width: 100vw;
+    margin: 5vw 0;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    position: relative;
+    height: 22vw;
+    width: 22vw;
+    margin: auto;
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.card img{
+    width: 100%;
+}
+.card-text{
+    position: absolute;
+    opacity: 0;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+.card p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.card:hover .card-text{
+    opacity: 1;
+}
+.row-5{
+    margin: 3vw 0 1vw 0;
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+}
+.row-5 div{
+    padding: 1em;
+}
+.row-6{
+    max-width: 700px;
+    margin: auto;
+}
+.veg-menu{
+    display: grid;
+    padding: 0 1em;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+}
+.non-veg-menu{
+    display: grid;
+    padding: 0 1em;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
 
+}
+.no-menu{
+    display: none;
+}
+.menu-item, .menu-item-price{
+    padding: 0.5em 0;
+}
+.row-8{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.row-8-1 , .row-8-2{
+    padding: 2em 3em;
+}
+.contact{
+    font-size: 2rem;
+}
+input[type='text'], input[type='number'], input[type='email']{
+    display: block;
+    width: 100%;
+    height: 2em;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 2px solid rgb(209, 207, 207);
+}
+input[type='text']:focus, input[type='number']:focus, input[type='email']:focus{
+    outline: none;
+    border-bottom: 2px solid #6a197d;
+}
+input[type='submit']{
+    display: block;
+    width: 25%;
+    height: 2em;
+    margin: 2em 0;
+    background-color: black;
+    color: white;
+}
+input[type='submit']:hover{
+    background-color: rgb(51, 50, 50);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.row-8-2{
+    padding: 2em 3em;
+    margin: auto;
+}
+.row-8-2-text{
+    margin: 1em 0;
+}
 
 
 
 @media (max-width: 768px){
-    
-    
     header{
         display: grid;
         grid-template-columns: 100%;
@@ -187,21 +310,63 @@ header{
         justify-content: center;
         text-align: center;
     }
+    .row-7{
+        display: grid;
+        width: 100vw;
+        margin: 5vh 0;
+        grid-template-columns: 40% 40%;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .card{
+        position: relative;
+        margin: 1.5em auto;
+        width: 40vw;
+        height: 40vw;
+        overflow: hidden;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    
+   
 }
 @media (max-width: 576px){
     *{
-        font-size:12px;
+        font-size:14px;
+    }
+    .row-7{
+        display: grid;
+        width: 100vw;
+        margin: 5vh 0;
+        grid-template-columns: 75%;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .card{
+        position: relative;
+        margin: 1.5em auto;
+        width: 75vw;
+        height: 75vw;
+        overflow: hidden;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    .row-8{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
     }
 }
 @media (min-width: 577px) and (max-width: 768px){
     *{
-        font-size:13px;
+        font-size:14px;
     }
 }
 @media (min-width: 769px) and (max-width: 992px){
     *{
-        font-size:14px;
+        font-size:16px;
     }
+    
 }
 @media (min-width: 993px) and (max-width: 1200px){
     *{
